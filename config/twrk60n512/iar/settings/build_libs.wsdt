@@ -11,7 +11,7 @@
       <Project>usb_ddk_twrk60n512/Debug</Project>
       <Project>usb_hdk_twrk60n512/Debug</Project>
     </CurrentConfigs>
-    <CurrentProj>bsp_twrk60n512</CurrentProj>
+    <CurrentProj>shell_twrk60n512</CurrentProj>
     <OverviewSelected>0</OverviewSelected>
   </ConfigDictionary>
   <Desktop>
@@ -43,9 +43,11 @@
                 <ExpandedNode>&lt;ws&gt;</ExpandedNode>
                 <ExpandedNode>bsp_twrk60n512</ExpandedNode>
                 <ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers</ExpandedNode>
-                <ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers/flexcan</ExpandedNode>
-                <ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers/spi</ExpandedNode>
                 <ExpandedNode>bsp_twrk60n512/twrk60n512 User Config</ExpandedNode>
+                <ExpandedNode>shell_twrk60n512</ExpandedNode>
+                <ExpandedNode>shell_twrk60n512/Shell Include</ExpandedNode>
+                <ExpandedNode>shell_twrk60n512/Shell Source</ExpandedNode>
+                <ExpandedNode>shell_twrk60n512/Shell Source/MFS</ExpandedNode>
               </NodeDict>
             </Session>
           </Tab>
@@ -135,10 +137,18 @@
           <Filename>$WS_DIR$\..\..\..\mqx\source\io\spi\int\spi_dma_dspi.c</Filename>
           <XPos>0</XPos>
           <YPos>962</YPos>
-          <SelStart>31478</SelStart>
-          <SelEnd>31478</SelEnd>
+          <SelStart>31468</SelStart>
+          <SelEnd>31468</SelEnd>
         </Tab>
-        <ActiveTab>8</ActiveTab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\..\shell\source\include\sh_mfs.h</Filename>
+          <XPos>0</XPos>
+          <YPos>57</YPos>
+          <SelStart>3776</SelStart>
+          <SelEnd>3776</SelEnd>
+        </Tab>
+        <ActiveTab>9</ActiveTab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
