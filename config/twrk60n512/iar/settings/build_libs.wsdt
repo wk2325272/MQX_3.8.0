@@ -11,14 +11,14 @@
       <Project>usb_ddk_twrk60n512/Debug</Project>
       <Project>usb_hdk_twrk60n512/Debug</Project>
     </CurrentConfigs>
-    <CurrentProj>shell_twrk60n512</CurrentProj>
+    <CurrentProj>bsp_twrk60n512</CurrentProj>
     <OverviewSelected>0</OverviewSelected>
   </ConfigDictionary>
   <Desktop>
     <Static>
       <Workspace>
         <ColumnWidths>
-          <Column0>248</Column0>
+          <Column0>265</Column0>
           <Column1>27</Column1>
           <Column2>27</Column2>
           <Column3>27</Column3>
@@ -32,7 +32,7 @@
       </Build>
     </Static>
     <Windows>
-      <Wnd2>
+      <Wnd0>
         <Tabs>
           <Tab>
             <Identity>TabID-18043-7758</Identity>
@@ -42,9 +42,11 @@
               <NodeDict>
                 <ExpandedNode>&lt;ws&gt;</ExpandedNode>
                 <ExpandedNode>bsp_twrk60n512</ExpandedNode>
+                <ExpandedNode>bsp_twrk60n512/Output</ExpandedNode>
                 <ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers</ExpandedNode>
                 <ExpandedNode>bsp_twrk60n512/twrk60n512 User Config</ExpandedNode>
                 <ExpandedNode>shell_twrk60n512</ExpandedNode>
+                <ExpandedNode>shell_twrk60n512/Output</ExpandedNode>
                 <ExpandedNode>shell_twrk60n512/Shell Include</ExpandedNode>
                 <ExpandedNode>shell_twrk60n512/Shell Source</ExpandedNode>
                 <ExpandedNode>shell_twrk60n512/Shell Source/MFS</ExpandedNode>
@@ -53,8 +55,8 @@
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
-      </Wnd2>
-      <Wnd3>
+      </Wnd0>
+      <Wnd1>
         <Tabs>
           <Tab>
             <Identity>TabID-21013-13434</Identity>
@@ -64,7 +66,7 @@
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
-      </Wnd3>
+      </Wnd1>
     </Windows>
     <Editor>
       <Pane>
@@ -72,10 +74,11 @@
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\..\user_config.h</Filename>
           <XPos>0</XPos>
-          <YPos>94</YPos>
-          <SelStart>3925</SelStart>
-          <SelEnd>3925</SelEnd>
+          <YPos>79</YPos>
+          <SelStart>2735</SelStart>
+          <SelEnd>2735</SelEnd>
         </Tab>
+        <ActiveTab>0</ActiveTab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\..\..\..\mqx\source\bsp\twrk60n512\init_gpio.c</Filename>
@@ -144,11 +147,10 @@
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\..\..\..\shell\source\include\sh_mfs.h</Filename>
           <XPos>0</XPos>
-          <YPos>57</YPos>
-          <SelStart>3776</SelStart>
-          <SelEnd>3776</SelEnd>
+          <YPos>48</YPos>
+          <SelStart>3390</SelStart>
+          <SelEnd>3390</SelEnd>
         </Tab>
-        <ActiveTab>9</ActiveTab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
@@ -172,7 +174,7 @@
       <Left>
         <Row0>
           <Sizes>
-            <Wnd2>
+            <Wnd0>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
@@ -187,7 +189,7 @@
                 <sizeVertCX>236806</sizeVertCX>
                 <sizeVertCY>720049</sizeVertCY>
               </Rect>
-            </Wnd2>
+            </Wnd0>
           </Sizes>
         </Row0>
       </Left>
@@ -199,7 +201,7 @@
       <Bottom>
         <Row0>
           <Sizes>
-            <Wnd3>
+            <Wnd1>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
@@ -214,7 +216,7 @@
                 <sizeVertCX>138889</sizeVertCX>
                 <sizeVertCY>244499</sizeVertCY>
               </Rect>
-            </Wnd3>
+            </Wnd1>
           </Sizes>
         </Row0>
       </Bottom>
