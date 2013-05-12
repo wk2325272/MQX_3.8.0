@@ -478,19 +478,31 @@ _mqx_int _bsp_dspi_io_init
             pctl->PCR[2] = PORT_PCR_MUX(2);     /* DSPI0.SOUT   */
             pctl->PCR[3] = PORT_PCR_MUX(2);     /* DSPI0.SIN    */
 
+            /* wk@121018-->初始化 SPI0 的 CS5 */
+            pctl = (PORT_MemMapPtr)PORTB_BASE_PTR;
+            pctl->PCR[23] = PORT_PCR_MUX(3);     /* DSPI0.PCS5   */
+            
             /* Enable clock gate to DSPI0 module */
             sim->SCGC6 |= SIM_SCGC6_DSPI0_MASK;
             break;
 
         case 1:
             /* Configure GPIOE for DSPI1 peripheral function     */
-            pctl = (PORT_MemMapPtr)PORTE_BASE_PTR;
+//            pctl = (PORT_MemMapPtr)PORTE_BASE_PTR;
+//
+//            pctl->PCR[1] = PORT_PCR_MUX(2);     /* DSPI1.SOUT   */
+//            pctl->PCR[2] = PORT_PCR_MUX(2);     /* DSPI1.SCK    */
+//            pctl->PCR[3] = PORT_PCR_MUX(2);     /* DSPI1.SIN    */
+//            pctl->PCR[4] = PORT_PCR_MUX(2);     /* DSPI1.PCS0   */
 
-            pctl->PCR[1] = PORT_PCR_MUX(2);     /* DSPI1.SOUT   */
-            pctl->PCR[2] = PORT_PCR_MUX(2);     /* DSPI1.SCK    */
-            pctl->PCR[3] = PORT_PCR_MUX(2);     /* DSPI1.SIN    */
-            pctl->PCR[4] = PORT_PCR_MUX(2);     /* DSPI1.PCS0   */
+          /* wk@121017--> 修改 SPI2 的初始化引脚 */
+            pctl = (PORT_MemMapPtr)PORTB_BASE_PTR;
 
+            pctl->PCR[20] = PORT_PCR_MUX(2);    /* DSPI2.PCS0   */
+            pctl->PCR[21] = PORT_PCR_MUX(2);    /* DSPI2.SCK    */
+            pctl->PCR[22] = PORT_PCR_MUX(2);    /* DSPI2.SOUT   */
+            pctl->PCR[23] = PORT_PCR_MUX(2);    /* DSPI2.SIN    */
+          
             /* Enable clock gate to DSPI1 module */
             sim->SCGC6 |= SIM_SCGC6_SPI1_MASK;
             break;
