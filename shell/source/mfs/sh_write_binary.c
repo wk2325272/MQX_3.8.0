@@ -53,7 +53,7 @@
 *
 *END*---------------------------------------------------------------------*/
 
-int_32  Shell_write_binary(int_32 argc, char_ptr argv[] ,uchar num,uchar_ptr data)
+int_32  Shell_write_binary(int_32 argc, char_ptr argv[] ,uint_32 num,uchar_ptr data)
 { /* Body */
    boolean           print_usage, shorthelp = FALSE;
    int_32            return_code = SHELL_EXIT_SUCCESS;
@@ -70,6 +70,9 @@ int_32  Shell_write_binary(int_32 argc, char_ptr argv[] ,uchar num,uchar_ptr dat
    int_32               error = 0;
    _mqx_int             bi;   
 
+   /* wk @130514 -->  */
+   uint_32 nums;uchar left;
+   /* wk @130514 -->  */
    print_usage = Shell_check_help_request(argc, argv, &shorthelp ); // wk @130405 --> 简化程序减小时间
 
    if (!print_usage)  {
@@ -162,8 +165,17 @@ int_32  Shell_write_binary(int_32 argc, char_ptr argv[] ,uchar num,uchar_ptr dat
 //                  {
 ////                    write(fd,data+i,1);
 //                  }
-                   write(fd,data,num);
-                   /* wk @130405 --> 写我二进制数据 <--END */
+                  
+                   /* wk @130514 --> */
+                   nums=num>>7;
+                   left=(uchar)num&0x7f;
+                   for(uint_32 i=0;i<nums;i++)
+                     write(fd,&data[i<<7],SHELL_BLOCK_SIZE);
+                   write(fd,&data[nums<<7],left);
+                   /* wk @130514 --> end*/
+                   
+//                   write(fd,data,num);
+                   /* wk @130405 --> 写二进制数据 <--END */
                   
                   fclose(fd);
                } else  {
